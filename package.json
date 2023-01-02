@@ -2,6 +2,7 @@
   "name": "notebookjs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nicolascou.github.io/notebookjs/",
   "dependencies": {
     "@monaco-editor/react": "3.7.5",
     "@reduxjs/toolkit": "^1.9.1",
