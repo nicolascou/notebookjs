@@ -1,2 +1,2 @@
 # Notebook JS
-An online javascript bundler and transpiler
+[NotebookJS](https://nicolascou.github.io/notebookjs/) is an online javascript bundler and transpiler
