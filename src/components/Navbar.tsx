@@ -19,11 +19,11 @@ const Navbar: React.FC = () => {
   return (
     <div>
       <header>
-        <div style={{ position: 'absolute', left: '2rem' }}>
+        <div style={{ position: 'absolute', left: '2rem' }} className='nav-change-theme'>
           <ChangeTheme />
         </div>
         <h1 className="text-shadow">Notebook JS</h1>
-        <div style={{ position: 'absolute', right: '2rem'}} className='text-shadow'>
+        <div style={{ position: 'absolute', right: '2rem'}} className='text-shadow date-time'>
           <p>{date.format(now, 'YYYY/MM/DD HH:mm:ss')}</p>
         </div>
       </header>

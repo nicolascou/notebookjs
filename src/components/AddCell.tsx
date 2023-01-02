@@ -11,10 +11,10 @@ const AddCell: React.FC<AddCellProps> = ({ nextCellId }) => {
     <div className='add-cell'>
       <div className='add-cell-buttons'>
         <button onClick={() => insertCell({id: nextCellId, type: 'code', content: '' })}>
-          + Código
+          + Code
         </button>
         <button onClick={() => insertCell({id: nextCellId, type: 'text', content: 'Click to edit' })}>
-          + Texto
+          + Text
         </button>
       </div>
     </div>
