@@ -1,0 +1,241 @@
+@import url(media-queries.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', sans-serif;
+}
+
+body {
+  background-color: var(--color-light);
+}
+
+:root {
+  --color-light: #ddd;
+  --color-dark: #777;
+  
+  --color-secondary: #ccc;
+  --color-hover: #aaa;
+
+  --color-border-dark: #44444a;
+}
+
+/* CODE EDITOR AND RESIZE */
+.box-wrapper {
+  position: relative;
+}
+
+.codeEditor {
+  position: relative;
+  width: calc(100% - 10px);
+  height: 100%;
+}
+
+.codeEditor .monaco-editor {
+  width: 100% !important;
+}
+
+.resize-vertical {
+  border-top: 30px solid var(--color-border-dark);
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.resize-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.react-resizable-handle {
+  display: block;
+  background-color: var(--color-border-dark);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+ 
+.react-resizable-handle-s {
+  height: 10px;
+  width: 100%;
+  cursor: s-resize;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+}
+ 
+.react-resizable-handle-e {
+  width: 10px;
+  min-width: 10px;
+  height: 100%;
+  cursor: e-resize;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+
+.preview-wrapper {
+  position: relative;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.preview-wrapper iframe {
+  height: 100%;
+  background-color: white;
+  width: 100%;
+  border: none;
+}
+
+.react-draggable-transparent-selection .preview-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 4rem;
+  border-bottom: 2px solid black;
+}
+
+.text-shadow {
+  text-shadow: 0 0 10px #fff;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  margin-top: 2rem;
+}
+
+/* PREVIEW WINDOW */
+.preview-error {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: red;
+}
+
+.preview-loading {
+  height: 100%;
+  flex-grow: 1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXT EDITOR */
+.text-editor {
+  margin-bottom: -10px;
+}
+
+.text-editor .w-md-editor-bar svg {
+  display: none;
+}
+
+.text-editor .w-md-editor-bar {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+  height: 11px;
+  cursor: s-resize;
+  background-color: var(--color-border-dark);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 100%;
+  position: relative;
+  transform: translateY(2px);
+}
+
+.text-editor em {
+  font-style: italic;
+}
+
+.markdown-preview {
+  padding: 2rem;
+  background-color: #0d1117;
+}
+
+.action-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.action-bar button {
+  background-color: var(--color-secondary);
+  border: 1px solid black;
+  outline: none;
+  padding: .2rem .4rem;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.action-bar button:hover {
+  background-color: var(--color-hover);
+}
+
+.add-cell {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.add-cell-buttons {
+  text-align: center;
+}
+
+.add-cell-buttons button {
+  margin: 0 2rem;
+  border: 2px solid black;
+  background-color: var(--color-secondary);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.add-cell-buttons button:hover {
+  background-color: var(--color-hover);
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 300ms;
+}
+
+/* ChangeTheme */
+.changetheme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.changetheme button {
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: var(--color-secondary);
+  border: 2px solid black;
+  padding: .4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.changetheme span {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+  transition: all .3s;
+}
+.ball-light-mode {
+  left: 5px;
+}
+.ball-dark-mode {
+  transform: translateX(25px);
+}
