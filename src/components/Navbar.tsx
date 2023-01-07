@@ -3,11 +3,11 @@ import date from "date-and-time";
 import { useState, useEffect } from 'react';
 
 const Navbar: React.FC = () => { 
-  const [now, setNow] = useState(new Date);
+  const [now, setNow] = useState(new Date());
 
   useEffect(() => {
     const date = setInterval(() => {
-      setNow(new Date);
+      setNow(new Date());
     }, 1000);
 
     return () => {

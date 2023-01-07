@@ -1,6 +1,5 @@
 import MonacoEditor, { EditorDidMount } from '@monaco-editor/react';
 import { useRef } from 'react';
-import { useAppSelector } from '../app/hooks';
 
 interface CodeEditorProps {
   initialValue: string;

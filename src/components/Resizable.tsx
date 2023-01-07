@@ -31,13 +31,13 @@ const Resizable: React.FC<ResizableProps> = ({ direction, children }) => {
     return () => {
       window.removeEventListener('resize', listener)
     }
-  }, [])
+  }, [width])
   
   
-  if (direction == 'horizontal') {
+  if (direction === 'horizontal') {
     resizableProps = {
-      minConstraints: [window.innerWidth * 0.2, Infinity],
-      maxConstraints: [window.innerWidth * 0.75, Infinity],
+      minConstraints: [innerWidth * 0.2, Infinity],
+      maxConstraints: [innerWidth * 0.75, Infinity],
       height: Infinity, 
       width,
       resizeHandles: ['e'],
@@ -49,7 +49,7 @@ const Resizable: React.FC<ResizableProps> = ({ direction, children }) => {
   } else {
     resizableProps = {
       minConstraints: [Infinity, 60],
-      maxConstraints: [Infinity, window.innerHeight * 0.9],
+      maxConstraints: [Infinity, innerHeight * 0.9],
       height: 300, 
       width: Infinity,
       resizeHandles: ['s'],

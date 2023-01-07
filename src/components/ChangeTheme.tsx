@@ -1,10 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { useAppDispatch } from '../app/hooks';
 
 const ChangeTheme: React.FC = () => {
   const [theme, setTheme] = useState<string | null>(localStorage.getItem('theme-color') || 'dark');
-  const dispatch = useAppDispatch();
   
   const onChange = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light');
