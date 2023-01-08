@@ -22,6 +22,8 @@ const CodeCell: React.FC<CellContainerProps> = ({ cell }) => {
     return () => {
       clearTimeout(timer);
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cumulativeCode, cell.id])
 
   return (

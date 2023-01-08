@@ -30,6 +30,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ initialValue, onChange }) => {
           scrollBeyondLastLine: false,
           automaticLayout: true,
           tabSize: 2,
+          contextmenu: false
         }}
         value={initialValue} />
     </div>

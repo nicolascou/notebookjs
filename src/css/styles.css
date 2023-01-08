@@ -33,6 +33,7 @@ body {
 
 .codeEditor .monaco-editor {
   width: 100% !important;
+  z-index: 9 !important;
 }
 
 .resize-vertical {
